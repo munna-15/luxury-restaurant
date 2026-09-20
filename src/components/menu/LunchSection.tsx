@@ -1,3 +1,4 @@
+
 const lunchBackground =
   "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=2200&q=92";
 
@@ -64,22 +65,25 @@ function LunchItem({
 
       {/* Content */}
       <div className="min-w-0 flex-1">
-        <h3 className="font-display text-[1.3rem] font-semibold leading-none tracking-[-0.025em] text-white sm:text-[1.45rem]">
+        {/* Item Name — Normal Sans Serif */}
+        <h3 className="font-semibold text-[22px]  leading-6 tracking-normal text-white sm:text-[26px]">
           {name}
         </h3>
 
-        <p className="mt-2.5 max-w-[260px] font-body text-[11px] leading-5 text-white/70 sm:text-[12px] sm:leading-6">
+        {/* Description — Normal Sans Serif */}
+        <p className="mt-5 max-w-[280px] font-body text-[14px] font-normal leading-6 tracking-normal text-white/90 sm:text-[16px]">
           {description}
         </p>
-
-        {/* Underline */}
-        <span className="mt-4 block h-px w-full max-w-[220px] bg-white/25 transition-all duration-500 group-hover:max-w-[250px] group-hover:bg-[#c87832]" />
       </div>
     </article>
   );
 }
 
-function LunchPanel({ items }: { items: typeof lunchItems }) {
+function LunchPanel({
+  items,
+}: {
+  items: typeof lunchItems;
+}) {
   return (
     <div className="relative flex-1 overflow-hidden rounded-[28px]">
       {/* Background Image */}
@@ -93,13 +97,15 @@ function LunchPanel({ items }: { items: typeof lunchItems }) {
       {/* Black Overlay */}
       <div className="absolute inset-0 bg-black/65" />
 
-      {/* 3 Items — Vertical Grid */}
+      {/* Items */}
       <div className="relative z-10 grid grid-cols-1 px-7 py-5 sm:px-9 lg:px-10">
         {items.map((item, index) => (
           <div
             key={item.name}
             className={
-              index !== items.length - 1 ? "border-b border-white/10" : ""
+              index !== items.length - 1
+                ? "border-b border-white/10"
+                : ""
             }
           >
             <LunchItem
@@ -123,24 +129,20 @@ export default function LunchSection() {
       <div className="mx-auto max-w-[1180px] px-5 py-20 sm:px-8 lg:px-10 lg:py-24">
         {/* Heading */}
         <div className="flex flex-col items-center text-center">
-          <h2 className="font-display text-[clamp(3.8rem,6vw,6.3rem)] font-semibold leading-[0.82] tracking-[-0.055em] text-[#1b1713]">
-            Six Tasty
-            <br />
-            <span className="italic">Lunches for $9</span>
+          <h2 className="whitespace-nowrap font-display text-[clamp(2.8rem,4.5vw,4.6rem)] font-normal leading-[1.02] tracking-[-0.012em] text-[#1b1713]">
+            Six Tasty Lunches for $9
           </h2>
 
-          <div className="mt-6 h-px w-14 bg-[#c87832]" />
+          <div className="mt-5 h-px w-12 bg-[#d97706]" />
         </div>
 
-        {/* Two Panels — FLEX */}
+        {/* Two Panels */}
         <div className="mt-12 flex flex-col gap-6 lg:mt-14 lg:flex-row lg:items-stretch">
-          {/* Left Panel */}
           <LunchPanel items={firstThree} />
-
-          {/* Right Panel */}
           <LunchPanel items={lastThree} />
         </div>
       </div>
     </section>
   );
 }
+

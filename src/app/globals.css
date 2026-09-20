@@ -33,8 +33,9 @@ a {
 }
 
 img {
+  display: block;
   max-width: 100%;
-  height: auto;
+
 }
 
 ::selection {
@@ -45,8 +46,7 @@ img {
 /* Berkshire Swash */
 .font-display {
   font-family: var(--font-display), cursive;
-  font-weight: 400;
-  letter-spacing: -0.01em;
+  letter-spacing: normal;
 }
 
 /* Raleway */

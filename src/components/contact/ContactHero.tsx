@@ -1,5 +1,5 @@
 const contactHeroImage =
-  "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2400&q=95";
+  "https://images.unsplash.com/photo-1753727470818-078cff2ea353?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
 const frillImage =
   "https://websitedemos.net/italian-restaurant-02/wp-content/uploads/sites/283/2018/09/frill-free-img.png";
@@ -34,7 +34,7 @@ export default function ContactHero() {
             {/* Phone */}
             <a
               href="tel:+8801792960610"
-              className="mt-6 font-body text-[clamp(2.8rem,5vw,4rem)] font-semibold leading-[0.95] tracking-[0.015em] drop-shadow-[0_10px_28px_rgba(0,0,0,0.25)] transition-opacity duration-300 hover:opacity-80"
+              className="mt-6 text-[clamp(2.8rem,5vw,4rem)] font-semibold leading-[0.95] tracking-[0.015em] drop-shadow-[0_10px_28px_rgba(0,0,0,0.25)] transition-opacity duration-300 hover:opacity-80"
               style={{ color: "#ffffff" }}
             >
               +88 0179-2960610
@@ -45,7 +45,7 @@ export default function ContactHero() {
               src={frillImage}
               alt=""
               aria-hidden="true"
-              className="mt-6 h-auto w-[135px] opacity-90 sm:w-[155px] md:w-[170px]"
+              className="mt-8 h-auto w-[135px] opacity-90 sm:w-[155px] md:w-[230px]"
             />
           </div>
         </div>

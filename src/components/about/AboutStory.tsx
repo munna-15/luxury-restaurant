@@ -16,7 +16,7 @@ export default function AboutStory() {
       <div className="mx-auto max-w-[1280px] px-5 py-16 sm:px-8 lg:px-10 lg:py-20">
         <div className="grid items-center gap-8 lg:grid-cols-[1.15fr_0.82fr_0.68fr] lg:gap-10 xl:gap-12">
           {/* ---------------------------------------------------------------- */}
-          {/* Left — Content                                                  */}
+          {/* Left — Content                                                   */}
           {/* ---------------------------------------------------------------- */}
 
           <div className="w-full max-w-[500px]">
@@ -29,16 +29,16 @@ export default function AboutStory() {
             />
 
             {/* Heading */}
-            <h2 className="mt-5 max-w-[500px] font-display text-[clamp(2.2rem,3.6vw,3.9rem)] font-semibold leading-[0.92] tracking-[-0.045em] text-[#1b1713]">
+            <h2 className="mt-5 max-w-[450px]  text-[clamp(1.45rem,2.2vw,2.35rem)] font-semibold leading-[1.25] tracking-[-0.01em] text-[#1b1713]">
               Our Restaurant Is A Collective Of Amazing People Striving To Build
               Delightful Italian Cuisine.
             </h2>
 
             {/* Divider */}
-            <div className="mt-5 h-px w-11 bg-[#c87832]" />
+            <div className="mt-5 h-px w-11 bg-[#d97706]" />
 
             {/* Paragraph 1 */}
-            <p className="mt-5 max-w-[490px] font-body text-[12px] leading-6 text-[#756c62] sm:text-[13px] sm:leading-7">
+            <p className="mt-5 max-w-[490px] font-body text-[12px] font-normal leading-6 tracking-normal text-[#756c62] sm:text-[13px] sm:leading-7">
               Lectus fringilla occaecat iste pretium fugiat convallis a, veniam
               conubia qui leo quod sodales! Nemo hendrerit laborum, error!
               Reiciendis, voluptas officiis, placerat ratione blanditiis!
@@ -49,7 +49,7 @@ export default function AboutStory() {
             </p>
 
             {/* Paragraph 2 */}
-            <p className="mt-4 max-w-[490px] font-body text-[12px] leading-6 text-[#756c62] sm:text-[13px] sm:leading-7">
+            <p className="mt-4 max-w-[490px] font-body text-[12px] font-normal leading-6 tracking-normal text-[#756c62] sm:text-[13px] sm:leading-7">
               Rel nulla pulvinar montes suspendisse, turpis. Elementum nibh,
               autem nulla ullam, proident, hac ratione platea! Libero nam, harum
               quisque turpis fames sollicitudin blanditiis est aliquam aptent

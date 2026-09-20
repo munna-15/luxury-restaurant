@@ -1,3 +1,4 @@
+
 const platterImage =
   "https://websitedemos.net/italian-restaurant-02/wp-content/uploads/sites/283/2019/12/platter-img.jpg";
 
@@ -36,13 +37,12 @@ export default function PlatterSection() {
     <section className="relative w-full overflow-hidden bg-[#f4efe7]">
       <div className="mx-auto max-w-[1180px] px-5 py-20 sm:px-8 lg:px-10 lg:py-24">
         <div className="grid items-center gap-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
-          {/* ---------------------------------------------------------------- */}
-          {/* Left — Premium Layered Platter Images                            */}
-          {/* ---------------------------------------------------------------- */}
-
-          <div className="relative min-h-[600px] w-full lg:min-h-[700px]">
+          {/* ============================================================
+              LEFT — PREMIUM LAYERED PLATTER IMAGES
+          ============================================================ */}
+          <div className="relative min-h-[670px] w-full sm:min-h-[710px] lg:min-h-[760px]">
             {/* Back Image */}
-            <div className="absolute right-[-7%] top-[6%] h-[88%] w-[89%] overflow-hidden rounded-[28px]">
+            <div className="absolute right-[-9%] top-[5%] h-[91%] w-[94%] overflow-hidden rounded-[28px]">
               <img
                 src={platterImage}
                 alt=""
@@ -50,12 +50,11 @@ export default function PlatterSection() {
                 className="h-full w-full object-cover object-center"
               />
 
-              {/* Black opacity */}
               <div className="absolute inset-0 bg-black/55" />
             </div>
 
             {/* Front Image */}
-            <div className="absolute left-[-2%] top-0 h-[96%] w-[90%] overflow-hidden rounded-[28px] shadow-[0_32px_80px_rgba(27,23,19,0.18)]">
+            <div className="absolute left-[-3%] top-0 h-[98%] w-[94%] overflow-hidden rounded-[28px] shadow-[0_36px_90px_rgba(27,23,19,0.2)]">
               <img
                 src={platterImage}
                 alt="Italian platter"
@@ -64,49 +63,52 @@ export default function PlatterSection() {
             </div>
 
             {/* Decorative Border */}
-            <div className="pointer-events-none absolute bottom-[1%] left-[-4%] h-[84%] w-[87%] rounded-[28px] border border-[#c87832]/25" />
+            <div className="pointer-events-none absolute bottom-[0.5%] left-[-5%] h-[87%] w-[91%] rounded-[28px] border border-[#d97706]/25" />
           </div>
 
-          {/* ---------------------------------------------------------------- */}
-          {/* Right — Platter Menu                                             */}
-          {/* ---------------------------------------------------------------- */}
-
+          {/* ============================================================
+              RIGHT — PLATTER MENU
+          ============================================================ */}
           <div className="w-full max-w-[600px]">
-            <h2 className="font-display text-[clamp(4rem,6vw,6.5rem)] font-semibold leading-[0.8] tracking-[-0.055em] text-[#1b1713]">
+            {/* Main Display Heading */}
+            <h2 className="font-display text-[clamp(3rem,4.4vw,4.8rem)] font-normal leading-[1] tracking-[-0.015em] text-[#1b1713]">
               Platter
             </h2>
 
             {/* Divider */}
-            <div className="mt-6">
+            <div className="mt-5">
               <img
                 src={dividerImage}
                 alt=""
                 aria-hidden="true"
-                className="h-auto w-[120px] opacity-70"
+                className="h-auto w-[110px] opacity-65"
               />
             </div>
 
             {/* Menu Items */}
-            <div className="mt-9">
+            <div className="mt-8">
               {platterItems.map((item, index) => (
                 <article
                   key={item.name}
-                  className={`py-6 ${
+                  className={`py-6 sm:py-7 ${
                     index !== 0 ? "border-t border-[#1b1713]/10" : ""
                   }`}
                 >
                   <div className="flex items-start justify-between gap-8">
                     <div className="min-w-0">
-                      <h3 className="font-display text-[1.5rem] font-semibold leading-none tracking-[-0.025em] text-[#1b1713] transition-colors duration-300 hover:text-[#c87832] sm:text-[1.7rem]">
+                      {/* Item Name — Large + Bold Sans Serif */}
+                      <h3 className="font-semibold text-[24px]  leading-[1.2] tracking-normal text-[#1b1713] transition-colors duration-300 hover:text-[#d97706] sm:text-[28px]">
                         {item.name}
                       </h3>
 
-                      <p className="mt-3 max-w-[450px] font-body text-[12px] leading-6 text-[#756c62] sm:text-[13px] sm:leading-6">
+                      {/* Description — Normal Sans Serif */}
+                      <p className="mt-3 max-w-[450px] font-body text-[14px] font-normal leading-7 tracking-normal text-[#756c62] sm:text-[16px]">
                         {item.description}
                       </p>
                     </div>
 
-                    <span className="shrink-0 pt-0.5 font-display text-[1.3rem] font-semibold tracking-[-0.02em] text-[#1b1713] sm:text-[1.45rem]">
+                    {/* Price — Normal Sans Serif */}
+                    <span className="shrink-0 pt-1  text-[22px] font-semibold leading-6 tracking-normal text-black sm:text-[28px]">
                       {item.price}
                     </span>
                   </div>
@@ -119,3 +121,4 @@ export default function PlatterSection() {
     </section>
   );
 }
+

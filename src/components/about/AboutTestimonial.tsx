@@ -32,25 +32,25 @@ const reviewLogos = [
 export default function AboutTestimonial() {
   return (
     <section className="relative w-full overflow-hidden bg-[#f4efe7]">
-      <div className="mx-auto flex min-h-[680px] max-w-[1180px] items-center justify-center px-5 py-24 sm:px-8 sm:py-28 lg:min-h-[68vh] lg:px-10 lg:py-32">
+      <div className="mx-auto flex min-h-[560px] max-w-[1180px] items-center justify-center px-5 py-16 sm:min-h-[600px] sm:px-8 sm:py-20 lg:min-h-[62vh] lg:px-10 lg:py-24">
         <div className="flex w-full max-w-[820px] flex-col items-center text-center">
           {/* ------------------------------------------------------------ */}
           {/* Customer Quote                                               */}
           {/* ------------------------------------------------------------ */}
 
-          <blockquote className="max-w-[780px] font-display text-[clamp(1.65rem,3vw,2.65rem)] font-medium italic leading-[1.3] tracking-[-0.025em] text-[#40372f]">
+          <blockquote className="max-w-[760px] font-body text-[18px] font-normal leading-[1.55] tracking-normal text-[#40372f] sm:text-[20px] lg:text-[20px]">
             "Aliquip habitant ea suscipit ea varius cras habitasse ligula
             doloremque cepteur vehicula iste nibh, mattis assumenda massa."
           </blockquote>
 
           {/* Accent */}
-          <div className="mt-8 h-px w-12 bg-[#c87832]" />
+          <div className="mt-6 h-px w-12 bg-[#d97706]" />
 
           {/* ------------------------------------------------------------ */}
           {/* Customer Image                                               */}
           {/* ------------------------------------------------------------ */}
 
-          <div className="mt-9 h-[82px] w-[82px] overflow-hidden rounded-full border border-[#c87832]/30 p-1">
+          <div className="mt-7 h-[120px] w-[120px] overflow-hidden rounded-full border border-[#d97706]/30 p-1">
             <img
               src={customerImage}
               alt="Shamika Smith"
@@ -59,7 +59,7 @@ export default function AboutTestimonial() {
           </div>
 
           {/* Customer Name */}
-          <p className="mt-5 font-body text-[9px] font-bold uppercase tracking-[0.3em] text-[#1b1713]">
+          <p className="mt-4 font-body text-[16px] font-normal uppercase tracking-[0.24em] text-[#1b1713]">
             - Shamika Smith
           </p>
 
@@ -67,24 +67,27 @@ export default function AboutTestimonial() {
           {/* Recommended By                                                */}
           {/* ------------------------------------------------------------ */}
 
-          <div className="mt-20 flex flex-col items-center">
-            <h2 className="font-display text-[clamp(2.4rem,3.8vw,3.8rem)] font-semibold leading-[0.86] tracking-[-0.045em] text-[#1b1713]">
+          <div className="mt-14 flex w-full flex-col items-center">
+            <h2 className="font-display text-[22px] font-normal leading-none tracking-normal text-[#1b1713]">
               Recommended By
             </h2>
 
-            <div className="mt-5 h-px w-10 bg-[#c87832]" />
+            <div className="mt-4 h-px w-10 bg-[#d97706]" />
 
-            {/* Review Logos */}
-            <div className="mt-9 flex flex-wrap items-center justify-center gap-x-10 gap-y-7 sm:gap-x-12">
+            {/* -------------------------------------------------------- */}
+            {/* Review Logos — Single Row                                */}
+            {/* -------------------------------------------------------- */}
+
+            <div className="mt-12 flex w-full flex-nowrap items-center justify-center gap-3 overflow-hidden sm:gap-6 lg:gap-10">
               {reviewLogos.map((logo) => (
                 <div
                   key={logo.name}
-                  className="flex h-[42px] w-[110px] items-center justify-center"
+                  className="flex h-[52px] min-w-0 flex-1 items-center justify-center"
                 >
                   <img
                     src={logo.image}
                     alt={logo.name}
-                    className="max-h-full max-w-full object-contain opacity-75 transition-opacity duration-300 hover:opacity-100"
+                    className="max-h-[46px] w-auto max-w-full object-contain opacity-70 grayscale transition-all duration-400 ease-out hover:opacity-100 hover:grayscale-0 sm:max-h-[50px]"
                   />
                 </div>
               ))}

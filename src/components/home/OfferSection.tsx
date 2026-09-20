@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
@@ -15,10 +16,9 @@ export default function OfferSection() {
     >
       <div className="mx-auto flex h-full max-w-[1180px] items-center px-5 py-16 sm:px-8 lg:px-10 lg:py-0">
         <div className="mx-auto flex w-full max-w-[1000px] flex-col items-center justify-center gap-12 lg:flex-row lg:gap-14 xl:gap-16">
-          {/* ---------------------------------------------------------------- */}
-          {/* Left — Image                                                     */}
-          {/* ---------------------------------------------------------------- */}
-
+          {/* ============================================================
+              LEFT — IMAGE
+          ============================================================ */}
           <div className="relative h-[300px] w-full overflow-hidden shadow-[0_24px_60px_rgba(26,20,16,0.16)] sm:h-[330px] lg:h-[350px] lg:w-1/2 xl:h-[360px]">
             <img
               src={offerImage}
@@ -26,22 +26,24 @@ export default function OfferSection() {
               className="h-full w-full object-cover object-center transition-transform duration-700 ease-out hover:scale-[1.025]"
             />
 
+            {/* Bottom readability gradient */}
+            <div className="absolute inset-x-0 bottom-0 h-[42%] bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+
             {/* Image Caption */}
-            <div className="absolute inset-x-0 bottom-0 px-5 pb-5">
-              <div className="mx-auto max-w-[260px] px-5 py-2.5">
-                <p className="text-center font-body text-[10px] font-bold uppercase tracking-[0.28em] text-white sm:text-[11px]">
+            <div className="absolute inset-x-0 bottom-0 px-5 pb-5 sm:pb-6">
+              <div className="mx-auto flex max-w-[280px] items-center justify-center">
+                <p className="font-body text-[10px] font-normal uppercase tracking-[0.22em] text-white sm:text-[11px]">
                   Good Food
-                  <span className="mx-3 text-[#c87832]">|</span>
+                  <span className="mx-3 text-[#d97706]">|</span>
                   Good Wine
                 </p>
               </div>
             </div>
           </div>
 
-          {/* ---------------------------------------------------------------- */}
-          {/* Right — Content                                                   */}
-          {/* ---------------------------------------------------------------- */}
-
+          {/* ============================================================
+              RIGHT — CONTENT
+          ============================================================ */}
           <div className="flex w-full items-center lg:w-1/2">
             <div className="w-full max-w-[500px]">
               {/* Decorative */}
@@ -50,31 +52,29 @@ export default function OfferSection() {
                   src={parcelliImage}
                   alt=""
                   aria-hidden="true"
-                  className="h-auto w-[82px] opacity-50 sm:w-[92px]"
+                  className="h-auto w-[78px] opacity-50 sm:w-[88px]"
                 />
 
-                <span className="h-px w-10 bg-[#c87832]/60" />
+                <span className="h-px w-10 bg-[#d97706]/60" />
               </div>
 
-              {/* Eyebrow */}
-              <p className="mt-4 font-body text-[9px] font-semibold uppercase tracking-[0.36em] text-[#c87832] sm:text-[10px]">
+              {/* Eyebrow — normal font */}
+              <p className="mt-4 font-body text-[9px] font-normal uppercase tracking-[0.3em] text-[#d97706] sm:text-[10px]">
                 Wednesdays Means
               </p>
 
-              {/* Heading */}
-              <h2 className="mt-3 font-display text-[clamp(3.3rem,4.8vw,5.5rem)] font-semibold leading-[0.8] tracking-[-0.055em] text-[#1b1713]">
-                Happy
-                <br />
-                <span className="italic">Hours!</span>
+              {/* Main Display Heading */}
+              <h2 className="mt-3 font-display text-[clamp(3.25rem,4.6vw,5.2rem)] font-normal leading-[1] tracking-[-0.018em] text-[#1b1713]">
+                Happy Hours!
               </h2>
 
-              {/* Offer */}
-              <p className="mt-5 max-w-[470px] font-display text-[1.25rem] font-semibold leading-[1.06] tracking-[-0.025em] text-[#1b1713] sm:text-[1.45rem]">
+              {/* Offer — normal font */}
+              <p className="mt-6 max-w-[470px] font-body text-[15px] font-normal leading-7 tracking-normal text-[#1b1713] sm:text-[16px] sm:leading-7">
                 Half Price Bottles of Wine and Six Tasty Lunches for $9
               </p>
 
-              {/* Description */}
-              <p className="mt-4 max-w-[450px] font-body text-[12px] leading-6 text-[#756c62] sm:text-[13px] sm:leading-6">
+              {/* Description — normal font */}
+              <p className="mt-4 max-w-[450px] font-body text-[12px] font-normal leading-6 tracking-normal text-[#756c62] sm:text-[13px] sm:leading-7">
                 Congue, gravida. Placeat nibh sunt semper elementum anim!
                 Integer lectus debitis auctor. Molestias vivamus eligendi ut,
                 cupidatat nisl iaculis etiam!
@@ -83,17 +83,15 @@ export default function OfferSection() {
               {/* CTA */}
               <Link
                 href="/menu"
-                className="group mt-6 inline-flex items-center gap-4 rounded-full bg-[#c87832] px-5 py-3 font-body text-[9px] font-bold uppercase tracking-[0.2em] text-white shadow-[0_10px_26px_rgba(200,120,50,0.18)] transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.035] hover:bg-[#b86b29] hover:shadow-[0_16px_35px_rgba(200,120,50,0.28)]"
+                className="group mt-7 inline-flex items-center gap-4 rounded-full bg-[#d97706] px-6 py-3.5 font-body text-[11px] font-normal uppercase tracking-[0.17em] !text-white shadow-[0_10px_26px_rgba(217,119,6,0.18)] transition-all duration-300 hover:bg-[#b45309] hover:shadow-[0_14px_32px_rgba(180,83,9,0.25)]"
               >
-                <span className="transition-transform duration-500 group-hover:translate-x-0.5">
-                  Discover Offer
-                </span>
+                <span>Discover Offer</span>
 
-                <span className="flex h-7 w-7 items-center justify-center rounded-full border border-white/30 bg-white/10">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full border border-white/35 bg-white/10">
                   <ArrowUpRight
-                    size={15}
-                    strokeWidth={2.6}
-                    className="text-white transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1"
+                    size={16}
+                    strokeWidth={1.7}
+                    className="text-white transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                   />
                 </span>
               </Link>
@@ -104,3 +102,4 @@ export default function OfferSection() {
     </section>
   );
 }
+

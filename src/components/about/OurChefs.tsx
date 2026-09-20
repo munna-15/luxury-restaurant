@@ -1,5 +1,13 @@
+
 import Link from "next/link";
-import { ArrowUpRight, CarFront, Cigarette, Music2, Wifi } from "lucide-react";
+
+import {
+  ArrowUpRight,
+  CarFront,
+  Cigarette,
+  Music2,
+  Wifi,
+} from "lucide-react";
 
 const frillImage =
   "https://websitedemos.net/italian-restaurant-02/wp-content/uploads/sites/283/2018/09/frill-free-img.png";
@@ -72,25 +80,28 @@ function ChefCard({
   image: string;
 }) {
   return (
-    <article className="group relative h-[270px] overflow-hidden border border-[#c87832] sm:h-[290px] lg:h-[300px]">
+    <article className="group relative h-[340px] overflow-hidden border border-[#d97706] sm:h-[370px] lg:h-[400px]">
       <img
         src={image}
         alt={name}
         className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.035]"
       />
 
-      <div className="absolute inset-0 bg-black/48 transition-all duration-500 group-hover:bg-black/38" />
+      <div className="absolute inset-0 bg-black/46 transition-all duration-500 group-hover:bg-black/36" />
 
-      <div className="absolute inset-x-0 bottom-0 z-10 p-5 sm:p-6">
-        <span className="block h-px w-9 bg-[#c87832] transition-all duration-500 group-hover:w-14" />
+      {/* Bottom Center Content */}
+      <div className="absolute inset-x-0 bottom-0 z-10 flex justify-center px-6 pb-7 text-center sm:pb-8 lg:pb-9">
+        <div className="flex flex-col items-center">
+          <span className="h-px w-9 bg-[#d97706] transition-all duration-500 group-hover:w-14" />
 
-        <h3 className="mt-3 font-display text-[1.55rem] font-semibold leading-[0.9] tracking-[-0.04em] text-white sm:text-[1.7rem]">
-          {name}
-        </h3>
+          <h3 className="mt-3 font-body text-[1.15rem] font-bold leading-[1.2] tracking-normal text-white sm:text-[1.25rem] lg:text-[1.35rem]">
+            {name}
+          </h3>
 
-        <p className="mt-2 font-body text-[8px] font-semibold uppercase tracking-[0.25em] text-white/68">
-          {role}
-        </p>
+          <p className="mt-2 font-display text-[1.2rem] font-normal leading-none tracking-normal text-white/92 sm:text-[1.3rem] lg:text-[1.4rem]">
+            {role}
+          </p>
+        </div>
       </div>
     </article>
   );
@@ -98,39 +109,37 @@ function ChefCard({
 
 function InternCard() {
   return (
-    <article className="group relative h-[270px] overflow-hidden border border-[#c87832] sm:h-[290px] lg:h-[300px]">
+    <article className="group relative h-[340px] overflow-hidden border border-[#d97706] sm:h-[370px] lg:h-[400px]">
       <img
         src={ctaImage}
         alt="Restaurant team"
         className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.035]"
       />
 
-      <div className="absolute inset-0 bg-black/56 transition-all duration-500 group-hover:bg-black/46" />
+      <div className="absolute inset-0 bg-black/56 transition-all duration-500 group-hover:bg-black/45" />
 
-      <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-white sm:px-8">
-        <p className="font-body text-[8px] font-semibold uppercase tracking-[0.3em] text-[#d8a06a]">
+      <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center sm:px-8">
+        <p className="font-body text-[8px] font-semibold uppercase tracking-[0.3em] text-[#e0ab79]">
           Join Our Team
         </p>
 
-        <h3 className="mt-3 max-w-[250px] font-display text-[clamp(1.9rem,2.8vw,2.7rem)] font-semibold leading-[0.88] tracking-[-0.045em]">
-          Looking For
-          <br />
-          Management Interns
+        <h3 className="mt-2 whitespace-nowrap font-body text-[1rem] font-normal leading-none tracking-normal text-white sm:text-[1.08rem] lg:text-[1.18rem]">
+          Looking For Management Interns
         </h3>
 
-        <div className="mt-5 h-px w-10 bg-[#c87832]" />
+        <div className="mt-4 h-px w-10 bg-[#d97706]" />
 
         <Link
           href="#"
-          className="group/button mt-5 inline-flex items-center gap-3 rounded-full bg-[#c87832] px-4 py-2.5 font-body text-[8px] font-bold uppercase tracking-[0.2em] text-white shadow-[0_10px_24px_rgba(0,0,0,0.22)] transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.03] hover:bg-[#b86b29]"
+          className="group/button mt-4 inline-flex items-center gap-3 rounded-full border border-[#d97706]/70 bg-[#d97706] px-5 py-2.5 font-body text-[9px] font-semibold uppercase tracking-[0.18em] text-white shadow-[0_10px_30px_rgba(0,0,0,0.28)] transition-all duration-300 hover:-translate-y-1 hover:border-[#b45309] hover:bg-[#b45309] hover:shadow-[0_14px_34px_rgba(0,0,0,0.34)]"
         >
-          <span>Apply Today!</span>
+          <span>Apply Today</span>
 
-          <span className="flex h-6 w-6 items-center justify-center rounded-full border border-white/25 bg-white/10">
+          <span className="flex h-7 w-7 items-center justify-center rounded-full border border-white/30 bg-white/10 transition-colors duration-300 group-hover/button:bg-white/15">
             <ArrowUpRight
               size={14}
-              strokeWidth={2.5}
-              className="transition-transform duration-500 group-hover/button:translate-x-1 group-hover/button:-translate-y-1"
+              strokeWidth={2}
+              className="transition-transform duration-300 group-hover/button:translate-x-0.5 group-hover/button:-translate-y-0.5"
             />
           </span>
         </Link>
@@ -147,8 +156,7 @@ export default function OurChefs() {
       {/* ================================================================ */}
 
       <div className="relative overflow-hidden">
-        {/* Background Image
-            Ends 90px BEFORE the bottom of the last chef row */}
+        {/* Background */}
         <div className="absolute inset-x-0 top-0 bottom-[90px]">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -163,29 +171,29 @@ export default function OurChefs() {
 
         <div className="relative z-10">
           {/* ------------------------------------------------------------ */}
-          {/* Header                                                        */}
+          {/* Header                                                       */}
           {/* ------------------------------------------------------------ */}
 
           <div className="bg-[#171310]/30">
-            <div className="mx-auto flex max-w-[1280px] flex-col items-center px-5 py-16 text-center sm:px-8 sm:py-20 lg:px-10 lg:py-22">
+            <div className="mx-auto flex max-w-[1280px] flex-col items-center px-5 py-13 text-center sm:px-8 sm:py-15 lg:px-10 lg:py-16">
+              <h2 className="font-display text-[clamp(2.4rem,3.6vw,3.9rem)] font-normal leading-none tracking-[-0.01em] text-white">
+                Our Chefs
+              </h2>
+
               <img
                 src={frillImage}
                 alt=""
                 aria-hidden="true"
-                className="mb-6 h-auto w-[135px] opacity-75 sm:w-[155px]"
+                className="mt-8 h-auto w-[110px] opacity-75 sm:w-[225px]"
               />
-
-              <h2 className="font-display text-[clamp(3.4rem,5.4vw,6rem)] font-semibold leading-[0.82] tracking-[-0.055em] text-white">
-                Our Chefs
-              </h2>
             </div>
           </div>
 
           {/* ------------------------------------------------------------ */}
-          {/* Chef Mosaic — NO GAPS                                         */}
+          {/* Chef Mosaic                                                  */}
           {/* ------------------------------------------------------------ */}
 
-          <div className="mx-auto max-w-[1060px] px-5 sm:px-8 lg:px-10">
+          <div className="mx-auto max-w-[1280px] px-5 sm:px-8 lg:px-10">
             {/* Top — 3 */}
             <div className="grid grid-cols-1 gap-0 sm:grid-cols-2 lg:grid-cols-3">
               <ChefCard
@@ -222,50 +230,50 @@ export default function OurChefs() {
       </div>
 
       {/* ================================================================ */}
-      {/* RESTAURANT AMENITIES                                              */}
+      {/* RESTAURANT AMENITIES                                             */}
       {/* ================================================================ */}
 
       <div className="relative z-10 bg-[#f1ece3]">
-        <div className="mx-auto max-w-[1180px] px-5 py-12 sm:px-8 lg:px-10 lg:py-14">
-          {/* Amenities Heading — LEFT */}
-          <div className="max-w-[480px]">
-            <h2 className="font-display text-[clamp(2.7rem,3.8vw,4.4rem)] font-semibold leading-[0.84] tracking-[-0.05em] text-[#1b1713]">
-              Restaurant Amenities
-            </h2>
+        <div className="mx-auto max-w-[1280px] px-5 py-12 sm:px-8 lg:px-10 lg:py-28">
+          {/* Amenities Header */}
+          <div className="flex items-end justify-between gap-8">
+            <div className="min-w-0">
+              <h2 className="whitespace-nowrap font-display text-[clamp(2.2rem,3.1vw,3.5rem)] font-normal leading-none tracking-[-0.01em] text-[#1b1713]">
+                Restaurant Amenities
+              </h2>
 
-            <div className="mt-4">
-              <img
-                src={dividerImage}
-                alt=""
-                aria-hidden="true"
-                className="h-auto w-[90px] opacity-70"
-              />
+              <div className="mt-12">
+                <img
+                  src={dividerImage}
+                  alt=""
+                  aria-hidden="true"
+                  className="h-auto w-[180px] opacity-70"
+                />
+              </div>
             </div>
           </div>
 
           {/* Amenities */}
-          <div className="mt-8 flex max-w-[850px] flex-col sm:flex-row">
+          <div className="mt-8 grid grid-cols-2 sm:grid-cols-4">
             {amenities.map((amenity, index) => {
               const Icon = amenity.icon;
 
               return (
                 <div
                   key={amenity.name}
-                  className={`flex flex-1 items-center gap-3 py-4 sm:flex-col sm:items-start sm:justify-center sm:px-5 sm:py-2 ${
-                    index !== 0
-                      ? "border-t border-[#1b1713]/10 sm:border-l sm:border-t-0"
-                      : ""
-                  }`}
+                  className={`flex items-center gap-3 border-[#1b1713]/10 py-4 sm:px-6 ${
+                    index !== 0 ? "sm:border-l" : "sm:pl-0"
+                  } ${index === 1 || index === 3 ? "pl-4" : "pr-4"}`}
                 >
                   <Icon
-                    size={18}
-                    strokeWidth={1.8}
-                    className="shrink-0 text-[#c87832]"
+                    size={32}
+                    strokeWidth={3}
+                    className="shrink-0 text-[#d97706]"
                   />
 
-                  <h3 className="font-display text-[1.15rem] font-semibold leading-none tracking-[-0.02em] text-[#1b1713]">
+                  <span className="whitespace-nowrap font-display text-[22px] font-normal leading-none tracking-[-0.01em] text-[#1b1713] sm:text-[30px] lg:text-[24px]">
                     {amenity.name}
-                  </h3>
+                  </span>
                 </div>
               );
             })}
@@ -275,3 +283,4 @@ export default function OurChefs() {
     </section>
   );
 }
+
