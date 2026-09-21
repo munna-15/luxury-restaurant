@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+
 import { Berkshire_Swash, Raleway } from "next/font/google";
+
 import "./globals.css";
 
 const displayFont = Berkshire_Swash({
@@ -17,10 +19,7 @@ const bodyFont = Raleway({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Maison.",
-    template: "%s | Maison.",
-  },
+  title: "Home | Maison.",
   description: "Italian Specialities — Good Food | Good Wine.",
 };
 
